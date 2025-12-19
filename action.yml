@@ -14,6 +14,15 @@ inputs:
   ignoredPaths:
     description: "Paths to folders that should be ignored. You can specify multiple paths separated by commas."
     required: false
+  excludeFilePatterns:
+    description: "Regex patterns to exclude files by name. Separate multiple patterns with commas."
+    required: false
+
+outputs:
+  hasIssues:
+    description: "Whether there are coverage issues (true/false)"
+  coverageReport:
+    description: "Formatted coverage report for PR comment"
 
 runs:
   using: "node16"
